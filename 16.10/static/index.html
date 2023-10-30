@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="linki"></div>
+    <script>
+        const options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: null
+        };
+        fetch("/pliki", options)
+            .then(response => response.json()) // konwersja na obiekt json, jeśli konieczne
+            .then(x => {
+                pliki = x
+                pliki.forEach(element => {
+                    const linki = document.getElementById("linki")
+                    const odnosnik = document.createElement("a")
+                    odnosnik.href = "/cwiczenia/" + element
+                    odnosnik.innerText = element
+                    document.body.appendChild(odnosnik)
+                });
+            }
+            )
+            .catch(error => console.log(error));
+    </script>
+</body>
+
+</html>
