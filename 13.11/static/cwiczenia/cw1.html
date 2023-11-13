@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../three.js"></script>
+<style>
+    * {
+        margin: 0px;
+    }
+
+    #lol {
+        position: absolute;
+    }
+</style>
+
+<body>
+    <div id="root">
+        <div id="lol">
+            <input type="range" min="0" max="10" step="1" id="intens">Intensity
+            <input type="range" min="0" max="100" step="1" id="y">posY
+            <input type="radio" name="target" value="kula" id="kula">Kula
+            <input type="radio" name="target" value="pudlo" checked="true" id="pudlo">Kula
+            <input type="range" min="0" max="360" step="0.01" id="kat">Kat
+        </div>
+    </div>
+</body>
+
+
+<script src="cw1.js"></script>
+
+</html>
